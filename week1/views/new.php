@@ -33,8 +33,48 @@
                     <h1><?= $page_title ?></h1>
                     <h5><?= $page_subtitle ?></h5>
                     <p><?= $page_content ?></p>
-                    <!-- Put your form here -->
+
+                    <!--Form for serie input-->
+
+                    <form action="<?= $form_action ?>" method="POST">
+                        <div class="form-group row">
+                            <label for="inputName" class="col-sm-2 col-formlabel">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputName"
+                                       name="Name" required value="<?php if (isset($serie_info)){echo $serie_info['name'];} ?>"
+                                >
+                            </div>
+                            </div>
+                        <div class="form-group row">
+                            <label for="inputCreator" class="col-sm-2 col-formlabel">Creator</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputCreator"
+                                       name="Creator" required value="<?php if (isset($serie_info)){echo $serie_info['creator'];} ?>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputSeasons" class="col-sm-2 col-formlabel">Seasons</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="inputSeasons"
+                                       name="Seasons" required value="<?php if (isset($serie_info)){echo $serie_info['seasons'];} ?>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputAbstract" class="col-sm-2 col-formlabel">Abstract</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" rows="3" id="inputAbstract" name="Abstract" required><?php if (isset($serie_info)){echo $serie_info['abstract'];} ?></textarea>
+                            </div>
+                        </div>
+                        <input type="hidden" id="serie_id" name="serie_id" value="<?php if (isset($serie_info)){echo $serie_info['id'];} ?>">
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <button type="submit" class="btn btn-primary"><?=
+                                    $submit_btn ?></button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+
 
                 <!-- Right column -->
                 <div class="col-md-4">
