@@ -1,0 +1,15 @@
+{
+  "name": "dexe3/DDWT18_week3",
+  "description": "",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "D. Hartman",
+      "email": "d.hartman.2@student.rug.nl"
+    }
+  ],
+  "require": {
+    "bramus/router": "1.3"
+  }
+}
